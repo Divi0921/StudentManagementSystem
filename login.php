@@ -11,7 +11,7 @@
 
 <body>
     <div class="form">    
-        <form action="http://localhost/StudentManagementSystem/dashboard.php" method="POST">
+        <form action="./dashboard.php" method="POST">
             <div><label for=""> Username:</label><input type="text" name="rollNumber" placeholder="Enter Id"></div>
             <div><label for=""> Password:</label><input type="text" name="password" placeholder="Enter Password"></div>
             <div><span><input type="radio" name="role" id="" value="0" class="role">Admin</span>

@@ -79,15 +79,14 @@ class Auth
         $stmt = $conn->prepare("select * from auth where rollNumber = ? and password = ? and role = ? and isActive = 1 ");
         $stmt->bind_param("sss", $rollNumber, $pass, $role);
         $stmt->execute();
-
-        echo $stmt->affected_rows;
         if ($stmt->affected_rows) {
             $result = $stmt->get_result();
             $user = $result->fetch_assoc();
-            print_r($user);
             $sessionData["_id"] =  $user['_id'] || null;
             $sessionData["rollNumber"] = $user['rollNumber'] || null;
             $sessionData["role"] = $user['role'] || null;
+
+            return $sessionData;
         }
         Connect::closeConnection($stmt, $conn);
         return null;

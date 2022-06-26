@@ -15,15 +15,19 @@ if (isset($_POST['rollNumber'])) {
 
     $user = Auth::login($rollNumber, $password, $role);
 
+
+    echo $user['_id'];
+
     if (!$user) {
-        exit(header(`Location: ` . getcwd() . ` /.start.php   `));
+        // exit(header("Location:  ./login.php"));
     }
 
     $_SESSION["_id"] = $user["_id"];
     $_SESSION["rollNumber"] = $user["rollNumber"];
     $_SESSION["role"] = $user["role"];
-} else {
-    $path =  getcwd();
 
-    exit(header(`Location:  ` . $path));
+    print_r($_SESSION["_id"]);
+
+} else {
+    exit(header("Location:  ./login.php"));
 }
