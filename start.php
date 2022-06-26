@@ -9,12 +9,16 @@
 </head>
 
 <body>
-    <form action="http://localhost/~diku/StudentManagementSystem/dashboard.php" method="POST">
-        <input type="text" name="rollNumber" placeholder="Enter Id">
-        <input type="text" name="password" placeholder="Enter Password">
-        <input type="number" name="role">
-        <input type="submit" value="login">
-    </form>
+    <div class="form">    
+        <form action="http://localhost/StudentManagementSystem/dashboard.php" method="POST">
+            <input type="text" name="rollNumber" placeholder="Enter Id">
+            <input type="text" name="password" placeholder="Enter Password">
+            <input type="radio" name="role" id="" value="0"> Admin
+            <input type="radio" name="role" id="" value="1"> Staff
+            <input type="radio" name="role" id="" value="2"> Student
+            <input type="submit" value="login">
+        </form>
+    </div>
 </body>
 
 </html>
