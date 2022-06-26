@@ -13,15 +13,109 @@
             <button class="student"><li >Student</li></button>
            
             <ul class="students">
-                <li> Create Profile</li>
-                <li>Upadte Profile</li>
-                <li>Show Profile</li>
+                <li id = "createProfile" >Create Profile</li>
+                <li id="updateProfile">Upadte Profile</li>
+                <li id ="showProfile">Show Profile</li>
             </ul>
         </ul>
     </nav>
     
+    <div class="show">
+        <div class="table">
+            <table>
+                <tr>
+                    <th>Sr. No.</th>
+                    <th>Roll Number</th>
+                    <th>Reg. Number</th>
+                    <th>Full Name</th>
+                    <th>Father's Name</th>
+                    <th>Student Number</th>
+                    <th>More Details</th>     
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+
+    <!-- update Profile -->
+
+    <div class="forms" style="display: none;">
+        <form action="">
+            <div>
+                <label for="">First Name :</label>
+                <input type="text" class="" name="firstName" placeholder="Enter First Name ">
+            
+                <label for="">Last Name:</label>
+                <input type="text" class="" name="lastName" placeholder="Enter Last Name">
+            </div>
+            <div>
+                <label for="">Roll No.:</label>
+                <input type="text" class="" name="rollNum" placeholder="Enter Roll Number">
+        
+                <label for="">Registration No.:</label>
+                <input type="number" class="" name="regNum" placeholder="Enter Registration Number">
+            </div>
+            <div>
+                <label for="">Father's Name:</label>
+                <input type="ext" class="" name="fatherName" placeholder="Enter Father's Name">
+        
+                <label for="">Mother's Name:</label>
+                <input type="text" class="" name="motherName" placeholder="Enter Mother's Name">
+            </div>
+            <div>
+                <label for="">Parent's Contact No. :</label>
+                <input type="number" class="" name="number" placeholder="Enter Parent's Contact Number">
+        
+                <label for="">Student's Contact No. :</label>
+                <input type="number" class="" name="number" placeholder="Enter Parent's Contact Number">
+            </div>
+            <div>
+                <label for="">Guardian Name :</label>
+                <input type="text" class="" name="guardName" placeholder="Enter Guardian Name">
+        
+                <label for="">Guardian Relation :</label>
+                <input type="text" class="" name="guardRel" placeholder="Enter Guardian Relation with You">
+            </div>
+            <div>
+                <label for="">Guardian Contact No. :</label>
+                <input type="number" class="" name="guardNum" placeholder="Enter Guardian Contact Number">
+        
+                <label for="">Guardian Relation :</label>
+                <input type="text" class="" name="guardRel" placeholder="Enter Guardian Relation with You">
+            </div>
+            <input type="submit" value="Create Profile" class="submit">
+        </form>
+    </div>
+
+    <section id="main" ></section> 
 </body>
 <script>
+    const createProfileForm = `
+    <div class="form">
+    <form action="">
+        <div><label for="">Roll Number :</label>
+        <input type="text" class="" name="rollName" placeholder="Enter Roll Number"></div>
+        
+        <input type="submit" value="Create Profile" class="submit">
+    </form>
+</div>`
+    const createProfilelink = document.getElementById("createProfile");
+    const main = document.getElementById("main");
+
+    createProfilelink.addEventListener("click", (e)=>{
+        students.classList.remove("show-text");
+        students.classList.toggle("students")
+        main.innerHTML = "";
+        main.innerHTML+= createProfileForm;
+    })
+
+
+
+
+
+
+
     const student =document.querySelector(".student");
     const students =document.querySelector(".students");
     student.addEventListener("click",function(e)
