@@ -10,7 +10,7 @@
 
 <body>
     <div class="form">    
-        <form action="http://localhost/StudentManagementSystem/dashboard.php" method="POST">
+        <form action="http://localhost/~diku/StudentManagementSystem/dashboard.php" method="POST">
             <input type="text" name="rollNumber" placeholder="Enter Id">
             <input type="text" name="password" placeholder="Enter Password">
             <input type="radio" name="role" id="" value="0"> Admin

@@ -1,7 +1,7 @@
 <?php
 
-require_once("./connect.php");
-require_once("../helpers/uuid.php");
+require_once(__DIR__ . "/connect.php");
+require_once(__DIR__ . "/../helpers/uuid.php");
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -78,18 +78,20 @@ class Auth
         $conn = Connect::createConnection();
         $stmt = $conn->prepare("select * from auth where rollNumber = ? and password = ? and role = ? and isActive = 1 ");
         $stmt->bind_param("sss", $rollNumber, $pass, $role);
-        $rows = $stmt->execute();
-        if ($rows) {
+        $stmt->execute();
+
+        echo $stmt->affected_rows;
+        if ($stmt->affected_rows) {
             $result = $stmt->get_result();
             $user = $result->fetch_assoc();
-            $sessionData["_id"] =  $user['_id'];
-            $sessionData["rollNumber"] = $user['rollNumber'];
-            $sessionData["role"] = $user['role'];
+            print_r($user);
+            $sessionData["_id"] =  $user['_id'] || null;
+            $sessionData["rollNumber"] = $user['rollNumber'] || null;
+            $sessionData["role"] = $user['role'] || null;
         }
         Connect::closeConnection($stmt, $conn);
-        return $sessionData;
+        return null;
     }
-
 }
 
 // Login checked
