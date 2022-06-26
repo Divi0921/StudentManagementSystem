@@ -30,6 +30,38 @@
 }
 
 
+/* navbar*/
+
+nav .studentss{
+    color: aliceblue;
+    text-decoration: none;
+    list-style: none;
+    padding: 3vh 30vw 1vh 30vw;
+    height: 4vh;
+    background-image: linear-gradient(100deg,#3a0505,#920d0d);
+}
+.student{
+    background-color: rgba(240, 255, 255, 0);
+    border-color: rgba(240, 248, 255, 0);
+    color: aliceblue;
+}
+.students {
+   display: none;
+  }
+.show-text {
+    display: block;
+    background-image: linear-gradient(100deg,#3a0505,#920d0d);
+    padding: 2vh 10vw 2vh 10vw;
+    height: 10vh;
+    margin-top: 1.5vh;
+    list-style: none;
+    border-top-left-radius: 0vh;
+    border-bottom-left-radius: 1vh;
+    border-bottom-right-radius: 1vh;
+    border-top-right-radius: 0vh;
+}
+
+
 @media (max-width:768px){
     .form .role{
         margin: 2.05vh;
