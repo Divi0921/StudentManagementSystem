@@ -73,7 +73,6 @@ class Auth
     // Everyone can do this
     public static function login($rollNumber, $pass, $role)
     {
-        $sessionData = [];
         $pass = md5($pass);
         $conn = Connect::createConnection();
         $stmt = $conn->prepare("select * from auth where rollNumber = ? and password = ? and role = ? and isActive = 1 ");
@@ -82,11 +81,8 @@ class Auth
         if ($stmt->affected_rows) {
             $result = $stmt->get_result();
             $user = $result->fetch_assoc();
-            $sessionData["_id"] =  $user['_id'] || null;
-            $sessionData["rollNumber"] = $user['rollNumber'] || null;
-            $sessionData["role"] = $user['role'] || null;
 
-            return $sessionData;
+            return $user;
         }
         Connect::closeConnection($stmt, $conn);
         return null;
