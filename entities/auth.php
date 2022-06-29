@@ -89,7 +89,7 @@ class Auth
     }
 }
 
-// Login checked
+// Login checkedArray ( [rollNumber] => 19CSE10 [password] => 19CSE10 [role] => 2 ) 19CSE10login then session started
 // $t1 = Auth::login("19CSE10", "19CSE10", 2);
 // print_r($t1);
 

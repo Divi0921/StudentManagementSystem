@@ -6,7 +6,8 @@ error_reporting(E_ALL);
 
 session_start();
 
-require("./entities/auth.php");
+require("../entities/auth.php");
+
 
 if (isset($_POST['rollNumber'])) {
     $rollNumber = $_POST['rollNumber'];
@@ -14,19 +15,19 @@ if (isset($_POST['rollNumber'])) {
     $role = $_POST['role'];
 
     if(!$rollNumber){
-        exit(header("Location:  ./login.php?msg=`userId can not be empty`"));        
+        exit(header("Location:  ../login.php?msg=`userId can not be empty`"));        
     }
     if(!$password){
-        exit(header("Location:  ./login.php?msg=`password can not be empty`"));        
+        exit(header("Location:  ../login.php?msg=`password can not be empty`"));        
     }
     if(!$role){
-        exit(header("Location:  ./login.php?msg=`role can not be empty`"));        
+        exit(header("Location:  ../login.php?msg=`role can not be empty`"));        
     }
 
     $user = Auth::login($rollNumber, $password, $role);
 
     if (!$user) {
-        exit(header("Location:  ./login.php?msg=`invalid userId and password`"));
+        exit(header("Location:  ../login.php?msg=`invalid userId and password`"));
     }
 
     $_SESSION["_id"] = $user["_id"];
@@ -35,11 +36,15 @@ if (isset($_POST['rollNumber'])) {
 
     echo "login then session started";
 
+    require("./dashboard.php");
+
 } 
 else if(isset($_SESSION["_id"]))
 {
-    echo "Hello session already set";
+    // echo "Hello session already set";
+    require("./dashboard.php");
+
 }
 else {
-    exit(header("Location:  ./login.php?msg=`invalid method`"));
+    // exit(header("Location:  ../login.php?msg=`invalid method`"));
 }

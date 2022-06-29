@@ -6,7 +6,7 @@ class Connect
     {
         $servername = "localhost";
         $username = "root";
-        $password = "password";
+        $password = "divya@123";
         $dbname = "sms";
 
         $conn = new mysqli($servername, $username, $password, $dbname);
