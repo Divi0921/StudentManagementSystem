@@ -62,15 +62,27 @@ nav a{
 .rows{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 .forms input{
     padding: 1vh;
     margin: 2vh;
 }
+
+.columns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 25vw;
+}
+.columns label, .columns span{
+    margin: 2vh;
+}
+
+
 .forms .submit{
     align-items: center;
-    margin-left: 10vw;
+    /* margin-left: 10vw; */
     width: 9vw;
     background-color: aqua;
     border-radius: 1vh;

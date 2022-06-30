@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Update Profile</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
   </head>
   <body>
     <nav>
@@ -16,7 +18,7 @@
       </ul>
     </nav>
 
-    <div class="btns">
+    <!-- <div class="btns">
       <div>
         <span class="btn" id="createProfile"> Create Profile</span>
         <span class="btn" id="viewProfile"> View Profile </span>
@@ -31,131 +33,177 @@
           /><span> <i class="fa fa-search"></i></span>
         </span>
       </div>
-    </div>
+    </div> -->
 
     <div class="forms">
       <form action="">
         <div class="rows">
-          <div>
+          <div class="columns">
             <label for="">First Name :</label>
             <input
               type="text"
-              class=""
               name="firstName"
               placeholder="Enter First Name "
             />
           </div>
-          <div>
+          <div class="columns">
             <label for="">Last Name:</label>
-            <input
-              type="text"
-              class=""
-              name="lastName"
-              placeholder="Enter Last Name"
-            />
+            <input type="text" name="lastName" placeholder="Enter Last Name" />
           </div>
         </div>
         <div class="rows">
-          <div>
+          <div class="columns">
             <label for="">Roll No.:</label>
-            <input
-              type="text"
-              class=""
-              name="rollNum"
-              placeholder="Enter Roll Number"
-            />
+            <input type="text" name="rollNum" placeholder="Enter Roll Number" />
           </div>
-          <div>
+          <div class="columns">
             <label for="">Registration No.:</label>
             <input
               type="number"
-              class=""
               name="regNum"
               placeholder="Enter Registration Number"
             />
           </div>
         </div>
         <div class="rows">
-          <div>
+          <div class="columns">
+            <label for="">Year of Admission :</label>
+            <input
+              type="text"
+              name="yearAdmission"
+              placeholder="Enter Year of Admission"
+            />
+          </div>
+          <div class="columns">
+            <label for="">Type of Admission:</label>
+            <input
+              type="text"
+              name="typeAdmission"
+              placeholder="Enter Type of Admission"
+            />
+          </div>
+        </div>
+        <div class="rows">
+          <div class="columns">
             <label for="">Father's Name:</label>
             <input
               type="ext"
-              class=""
               name="fatherName"
               placeholder="Enter Father's Name"
             />
           </div>
-          <div>
+          <div class="columns">
             <label for="">Mother's Name:</label>
             <input
               type="text"
-              class=""
               name="motherName"
               placeholder="Enter Mother's Name"
             />
           </div>
         </div>
         <div class="rows">
-          <div>
+          <div class="columns">
             <label for="">Parent's Contact No. :</label>
             <input
               type="number"
-              class=""
               name="number"
               placeholder="Enter Parent's Contact Number"
             />
           </div>
-          <div>
+          <div class="columns">
             <label for="">Student's Contact No. :</label>
             <input
               type="number"
-              class=""
               name="number"
               placeholder="Enter Parent's Contact Number"
             />
           </div>
         </div>
         <div class="rows">
-          <div>
+          <div class="columns">
             <label for="">Guardian Name :</label>
             <input
               type="text"
-              class=""
               name="guardName"
               placeholder="Enter Guardian Name"
             />
           </div>
-          <div>
+          <div class="columns">
             <label for="">Guardian Relation :</label>
             <input
               type="text"
-              class=""
               name="guardRel"
               placeholder="Enter Guardian Relation with You"
             />
           </div>
         </div>
         <div class="rows">
-          <div>
+          <div class="columns">
             <label for="">Guardian Contact No. :</label>
             <input
               type="number"
-              class=""
               name="guardNum"
               placeholder="Enter Guardian Contact Number"
             />
           </div>
-          <div>
-            <label for="">Guardian Relation :</label>
+          <div class="columns">
+            <div class="column">
+              <input type="radio" name="hostel" id="" /><span>Hosteller</span>
+              <input type="radio" name="hostel" id="" /><span>
+                Day Scholar
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="rows">
+          <div class="columns">
+            <label for="">Bank Name</label>
+            <input type="text" name="aadharNum" placeholder="Enter Bank Name" />
+          </div>
+          <div class="columns">
+            <label for="">Bank Account Number :</label>
             <input
-              type="text"
-              class=""
-              name="guardRel"
-              placeholder="Enter Guardian Relation with You"
+              type="number"
+              name="accountNum"
+              placeholder="Enter Bank Account Number"
             />
           </div>
         </div>
-        <input type="submit" value="Create Profile" class="submit" />
+        <div class="rows">
+          <div class="columns">
+            <label for="">IFSC Code</label>
+            <input type="text" name="ifscCode" placeholder="Enter IFSC Code" />
+          </div>
+          <div class="columns">
+            <label for="">Aadhar Number :</label>
+            <input
+              type="number"
+              name="aadharNum"
+              placeholder="Enter Aadhar Number"
+            />
+          </div>
+        </div>
+        <div class="rows">
+          <div class="columns">
+            <!-- <label for="">Laptop Status</label> -->
+            <div class="columns">
+              <label for="">Address :</label>
+              <input type="text" name="address" placeholder="Enter Address" />
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column">
+              <input type="radio" name="laptop" id="" value="yes" /><span
+                >Own a laptop</span
+              >
+              <input type="radio" name="laptop" id="" value="no" /><span
+                >Not own a Laptop</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <input type="submit" value="Update Profile" class="submit" />
       </form>
     </div>
   </body>
